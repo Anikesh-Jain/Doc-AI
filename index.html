@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>AI Receipt & Document Analyzer</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>AI Receipt & Document Analyzer</h1>
+
+    <div class="controls">
+      <input id="fileInput" type="file" accept="image/*" />
+      <button id="analyzeBtn">Analyze</button>
+    </div>
+
+    <div id="loading" class="loading">Analyzing…</div>
+
+    <div class="main-grid">
+      <div class="left-column">
+        <h2>Summary</h2>
+        <div id="summary" class="card-empty">Summary will appear here</div>
+
+        <h2>Extracted Details — Line-by-Line Explanation</h2>
+        <div id="details" class="details-box">Extracted details will appear here</div>
+      </div>
+
+      <div class="right-column">
+        <h2>Important Points</h2>
+        <div id="important" class="side-card">Important points will appear here</div>
+
+        <h2>Reminders / Urgent Calls</h2>
+        <div id="reminders" class="side-card">Your urgent reminders will appear here</div>
+      </div>
+    </div>
+
+    <footer class="hint">
+      Tip: Use the provided <strong>sample_receipt.png</strong> to test quickly.
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

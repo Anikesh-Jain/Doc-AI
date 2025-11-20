@@ -1,0 +1,111 @@
+:root{
+  --bg:#eef2f7;
+  --card:#ffffff;
+  --accent:#3f6efb;
+  --muted:#6b7280;
+  --radius:14px;
+}
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial;
+  background:var(--bg);
+  display:flex;
+  justify-content:center;
+  padding:40px 20px;
+}
+.container{
+  width:100%;
+  max-width:920px;
+  background:var(--card);
+  border-radius:var(--radius);
+  padding:38px;
+  box-shadow:0 10px 30px rgba(17,24,39,0.08);
+}
+h1{
+  font-size:28px;
+  margin:0 0 18px;
+  text-align:center;
+  color:#111827
+}
+.controls{
+  display:flex;
+  gap:12px;
+  align-items:center;
+  margin-bottom:18px;
+}
+#fileInput{
+  flex:1;
+  padding:10px 12px;
+  border-radius:10px;
+  border:1px solid #e6edf6;
+  background:#f8fafc;
+}
+#analyzeBtn{
+  background:linear-gradient(135deg,var(--accent),#5a8efb);
+  color:white;
+  border:none;
+  padding:12px 18px;
+  border-radius:10px;
+  font-weight:600;
+  cursor:pointer;
+}
+#analyzeBtn:hover{
+  transform:translateY(-2px)
+}
+.loading{
+  display:none;
+  text-align:center;
+  color:var(--accent);
+  font-weight:700;
+  margin:8px 0
+}
+.card-empty{
+  background:#fff;
+  padding:16px;
+  border-radius:12px;
+  border:1px solid #eef2f6;
+  min-height:56px
+}
+.details-box{
+  background:#fff;
+  padding:18px;
+  border-radius:12px;
+  border:1px solid #eef2f6;
+  margin-top:8px;
+  min-height:160px;
+  white-space:pre-wrap;
+  font-size:15px;
+  line-height:1.6;
+  color:#0b1220;
+}
+footer.hint{
+  margin-top:18px;
+  color:var(--muted);
+  font-size:13px;
+  text-align:center
+}
+.main-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 22px;
+  margin-top: 20px;
+}
+.left-column { width: 100%; }
+.right-column { width: 100%; }
+.side-card {
+  background: #fff;
+  padding: 16px;
+  border-radius: 12px;
+  border: 1px solid #eef2f6;
+  min-height: 140px;
+  white-space: pre-wrap;
+  line-height: 1.55;
+  color: #111;
+  font-size: 15px;
+}
+@media (max-width: 840px) {
+  .main-grid {
+    grid-template-columns: 1fr;
+  }
+}
